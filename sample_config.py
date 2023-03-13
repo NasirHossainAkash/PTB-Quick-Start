@@ -1,1 +1,0 @@
-bot_token = "your_bot_token_here"

@@ -4,14 +4,18 @@ from telegram import ParseMode
 from telegram.ext import Updater,Defaults
 
 
-from config import bot_token
+from config import Credentials
 
-logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
-                    level=logging.INFO)
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 
 defaults = Defaults(parse_mode=ParseMode.HTML,run_async=True)
-updater = Updater(token=bot_token,defaults=defaults)
+updater = Updater(token=Credentials.BOT_TOKEN,defaults=defaults)
 dispatcher = updater.dispatcher
+job_queue = updater.job_queue
 
 

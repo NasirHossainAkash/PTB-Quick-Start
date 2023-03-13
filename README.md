@@ -1,1 +1,1 @@
-# PTB-Quick-Start
+# Template for Telegram Bot Development
