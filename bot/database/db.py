@@ -18,5 +18,10 @@ class User(Base):
     email = Column(String)
 
 
+    def __init__(self,name,email):
+        self.name = name
+        self.email = email
+
+
 Base.metadata.create_all(engine)
 session = Session()
