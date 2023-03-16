@@ -8,4 +8,4 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 
 COPY . /app/
 
-CMD ["bash","start.sh"]
+CMD ["sh","start.sh"]
