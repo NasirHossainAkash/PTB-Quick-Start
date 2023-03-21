@@ -1,3 +1,4 @@
+from threading import RLock
 import logging
 
 from telegram import ParseMode
@@ -13,6 +14,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+lock = RLock()
 defaults = Defaults(parse_mode=ParseMode.HTML,run_async=True,disable_web_page_preview=True)
 updater = Updater(token=Credentials.BOT_TOKEN,defaults=defaults)
 dispatcher = updater.dispatcher
